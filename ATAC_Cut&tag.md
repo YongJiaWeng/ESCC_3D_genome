@@ -15,7 +15,7 @@ multiqc fastqc_out
 
 # Alignment to hg19 using bowtie2
 bowtie2 -p 8 -q -I 10 -X 1000 --dovetail --no-unal --very-sensitive-local --no-mixed --no-discordant \
--x /lustre/home/qqsong/wyj/reference/index/bowtie2/genome_index/hg19/hg19 \
+-x /lustre/home/reference/index/bowtie2/genome_index/hg19/hg19 \
 -1 sample_clean_1.fastq.gz \
 -2 sample_clean_2.fastq.gz \
 | samtools view -q 30 -F 4 -b - \
@@ -25,7 +25,7 @@ bowtie2 -p 8 -q -I 10 -X 1000 --dovetail --no-unal --very-sensitive-local --no-m
 samtools view -b -f 2 -q 30 -o sample_f2.q30.bam sample_sorted.bam
 
 # Remove PCR duplicates with picard
-java -jar /lustre/home/qqsong/wyj/biosoft/picard/picard.jar MarkDuplicates \
+java -jar /lustre/home/biosoft/picard/picard.jar MarkDuplicates \
 PG=null \
 VERBOSITY=ERROR \
 QUIET=true \
