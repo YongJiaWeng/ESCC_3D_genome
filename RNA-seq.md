@@ -2,7 +2,7 @@
 need to change directory respectively
 ```bash
 # Alignment using HISAT2 (v2.2.1, default parameters)
-hisat2 -p 8 -x /lustre/home/qqsong/wyj/reference/index/hisat2/hg19/hg19 \
+hisat2 -p 8 -x /lustre/home/reference/index/hisat2/hg19/hg19 \
 -1 sample_raw_1.fq.gz \
 -2 sample_raw_2.fq.gz \
 -S sample.sam \
