@@ -180,7 +180,7 @@ while read -r id; do
     --hic-50k /lustre/home/anaylis/hic/cool_files/50k/${id}.allValidPairs.hic_50000.cool_50k.cool \
     -O /lustre/home/anaylis/hic/EagleC/output/Output_Format_NeoLoopFinder/${id} \
     -g hg19 \
-    --balance-type CNV \
+    --balance-type ICE \
     --output-format NeoLoopFinder \
     --prob-cutoff-5k 0.8 \
     --prob-cutoff-10k 0.8 \
